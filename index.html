@@ -1,34 +1,66 @@
 <!DOCTYPE html>
 <head>
-  <title>Brandon Stewart</title>
+  <link href="/normalize.css" rel="stylesheet">
   <style>
-    body {
+    header {
       text-align: center;
-      background: url("http://qpattern.info/wp-content/uploads/2016/01/simple-background-patterns.jpg");
-      background-size: cover;
-      background-position: center;
+      background: url("http://freeimagescollection.com/images/backgrounds/yellow-orange-and-red-tones-for-website-backgrounds-and-wallpapers-f5.jpg");
+      background-size:cover;
       color: white;
-      font-family: helvetica;
     }
-    p {
-      font-size:22px;
+    a {
+      color: white;
     }
-    input {
-      border: 0;
+    h1 {
+      font-size: 70px;
+    }
+    img {
+      margin: 40px 0px 0px 0px;
+      border: 7px solid white;
+      border-radius: 90px;
+    }
+    ul {
       padding: 10px;
-      font-size: 18px;
+      background: rgba(0,0,0,0.5);
     }
-    input[type="submit]{
-      background: blue;
-      color: white;
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
+    article {
+      max-width: 500px;
+      padding: 20px;
+      margin: 0 auto;
+    }
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 36px;
+      }
+      li {
+        display: block;
+        padding: 5px;
+      }
     }
   </style>
 </head>
 <body>
-  <img src="http://www.ncsasports.org/seoj/system/client_photos/athlete_921746_profile.jpg">
-  <h1>Brandon Stewart</h1>
-  <p>Hi! I'm Brandon, a basketball player for the Scholars Academy Seawolves</p>
-  <input type="email" placeholder="Your email">
-  <input type="submit">
-  <script src='file.js'></script>
+  <header>
+    <img src="http://www.ncsasports.org/seoj/system/client_photos/athlete_921746_profile.jpg">
+    <h1>Brandon Stewart</h1>
+    <ul>
+      <li><a href="#">About Me</a></li>
+      <li><a href="#">Achievements</a></li>
+      <li><a href="#">Extras</a></li>
+    </ul>
+  </header>
+  <article>
+    <h2>More about me</h2>
+    <p>I am currently a rising senior attending the Scholars Academy high school where I also am a member of the varsity basketball team. I have been a member since freshman year and I look to maybe play in college as well</p>
+  <button>Like</button>
+  </article>
+  <script>
+  $("button").on("click", function() {
+    alert("You liked this")
+  });
+  </script>
 </body>
